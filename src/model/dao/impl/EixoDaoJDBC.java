@@ -35,7 +35,7 @@ public class EixoDaoJDBC implements EixoDao {
 				Eixo obj = new Eixo();
 				obj.setId(rs.getInt("Id"));
 				obj.setCod(rs.getString("Cod"));
-				obj.setDescricao(rs.getString("Descricao"));
+				obj.setDescricao(rs.getString("descricao"));
 				return obj;
 			}
 			return null;
@@ -91,7 +91,7 @@ public class EixoDaoJDBC implements EixoDao {
 				Statement.RETURN_GENERATED_KEYS);
 
 			st.setString(1, obj.getCod());
-			st.setString(2, obj.getCod());
+			st.setString(2, obj.getDescricao());
 
 			int rowsAffected = st.executeUpdate();
 			
