@@ -85,7 +85,7 @@ public class EixoDaoJDBC implements EixoDao {
 		try {
 			st = conn.prepareStatement(
 				"INSERT INTO eixo " +
-				"(cod,descricao) " +
+				"(cod,Descricao) " +
 				"VALUES " +
 				"(?,?)",
 				Statement.RETURN_GENERATED_KEYS);

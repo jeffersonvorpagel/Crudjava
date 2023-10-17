@@ -17,9 +17,9 @@ public class Funcoes {
 		System.out.println("informe o id que deseja atualizar");
 		Eixo dep2 = eixoDao.findById(sc.nextInt());
 		System.out.println("digite o codigo");
-		dep2.setCod(sc.next());
+		dep2.setCod(sc.nextLine());
 		System.out.println("digite a descricao");
-		dep2.setDescricao(sc.next());
+		dep2.setDescricao(sc.nextLine());
 		eixoDao.update(dep2);
 		System.out.println("Update completed");
 		sc.close();
@@ -58,9 +58,9 @@ public class Funcoes {
 
 		System.out.println("\n=== TEST 3: insert =======");
 		System.out.println("digite o codigo");
-		String cod= sc.next();
+		String cod= sc.nextLine();
 		System.out.println("digite a descricao");
-		String desc= sc2.next();
+		String desc= sc2.nextLine();
 		Eixo newEixo = new Eixo(null,cod,desc);
 		eixoDao.insert(newEixo);
 		System.out.println("Inserted! New id: " + newEixo.getId());

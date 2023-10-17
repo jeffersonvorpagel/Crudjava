@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef179186-bd2e-4456-8103-15a59e0fc061" name="Changes" comment="Crud Funcional">
-      <change afterPath="$PROJECT_DIR$/src/application/Funcoes.java" afterDir="false" />
+    <list default="true" id="ef179186-bd2e-4456-8103-15a59e0fc061" name="Changes" comment="att tirando seller e add Funcoes.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/CrudEixo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/CrudEixo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/SellerDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/entities/Seller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Funcoes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Funcoes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/EixoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/EixoDaoJDBC.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,9 @@
       <recent name="C:\Users\dribl\OneDrive\Documentos\Ex-dao-jdbc\src" />
       <recent name="C:\Users\dribl\OneDrive\Documentos\Ex-dao-jdbc" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="CrudEixo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -100,7 +98,7 @@
       <workItem from="1696976317191" duration="8341000" />
       <workItem from="1696992654985" duration="351000" />
       <workItem from="1697056525902" duration="1501000" />
-      <workItem from="1697493398382" duration="4868000" />
+      <workItem from="1697493398382" duration="6283000" />
     </task>
     <task id="LOCAL-00001" summary="att">
       <option name="closed" value="true" />
@@ -150,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697501754304</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="att tirando seller e add Funcoes.java">
+      <option name="closed" value="true" />
+      <created>1697577673422</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697577673422</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +190,8 @@
     <MESSAGE value="att" />
     <MESSAGE value="EixoAdd" />
     <MESSAGE value="Crud Funcional" />
-    <option name="LAST_COMMIT_MESSAGE" value="Crud Funcional" />
+    <MESSAGE value="att tirando seller e add Funcoes.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="att tirando seller e add Funcoes.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -199,5 +206,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Ex_dao_jdbc$CrudEixo.ic" NAME="CrudEixo Coverage Results" MODIFIED="1697577742892" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>application.*</FILTER>
+    </SUITE>
   </component>
 </project>
