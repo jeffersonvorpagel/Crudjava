@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ef179186-bd2e-4456-8103-15a59e0fc061" name="Changes" comment="EixoAdd">
+    <list default="true" id="ef179186-bd2e-4456-8103-15a59e0fc061" name="Changes" comment="Crud Funcional">
+      <change afterPath="$PROJECT_DIR$/src/application/Funcoes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/CrudEixo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/CrudEixo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/EixoDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/impl/EixoDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/dao/DaoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/SellerDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/impl/SellerDaoJDBC.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/entities/Seller.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +100,7 @@
       <workItem from="1696976317191" duration="8341000" />
       <workItem from="1696992654985" duration="351000" />
       <workItem from="1697056525902" duration="1501000" />
-      <workItem from="1697493398382" duration="2980000" />
+      <workItem from="1697493398382" duration="4868000" />
     </task>
     <task id="LOCAL-00001" summary="att">
       <option name="closed" value="true" />
@@ -137,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696992723178</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Crud Funcional">
+      <option name="closed" value="true" />
+      <created>1697501754304</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697501754304</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,7 +183,8 @@
     <MESSAGE value="teste" />
     <MESSAGE value="att" />
     <MESSAGE value="EixoAdd" />
-    <option name="LAST_COMMIT_MESSAGE" value="EixoAdd" />
+    <MESSAGE value="Crud Funcional" />
+    <option name="LAST_COMMIT_MESSAGE" value="Crud Funcional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
