@@ -15,12 +15,15 @@ public class Funcoes {
 
 		System.out.println("\n=== TEST 4: update =======");
 		System.out.println("informe o id que deseja atualizar");
-		Eixo dep2 = eixoDao.findById(sc.nextInt());
-		System.out.println("digite o codigo");
-		dep2.setCod(sc.nextLine());
-		System.out.println("digite a descricao");
-		dep2.setDescricao(sc.nextLine());
-		eixoDao.update(dep2);
+		Eixo eixo = eixoDao.findById(sc.nextInt());
+		System.out.println("digite o codigo:");
+		String cod= sc.next();
+		System.out.println("digite a descricao:");
+		sc.nextLine();// para limpar o buffer e liberar a proxima pergunta
+		String desc= sc.nextLine();
+		eixo.setCod(cod);
+		eixo.setDescricao(desc);
+		eixoDao.update(eixo);
 		System.out.println("Update completed");
 		sc.close();
 
@@ -52,7 +55,6 @@ public class Funcoes {
 
 	static void insertEixo(){
 		Scanner sc = new Scanner(System.in);
-		Scanner sc2 = new Scanner(System.in);
 
 		EixoDao eixoDao = DaoFactory.createEixoDao();
 
@@ -60,12 +62,11 @@ public class Funcoes {
 		System.out.println("digite o codigo");
 		String cod= sc.nextLine();
 		System.out.println("digite a descricao");
-		String desc= sc2.nextLine();
+		String desc= sc.nextLine();
 		Eixo newEixo = new Eixo(null,cod,desc);
 		eixoDao.insert(newEixo);
 		System.out.println("Inserted! New id: " + newEixo.getId());
 		sc.close();
-		sc2.close();
 	}
 
 	static void deleteEixo(){
