@@ -1,15 +1,11 @@
 package model.dao;
 
 import db.DB;
-import model.dao.impl.EixoDaoJDBC;
-import model.dao.impl.EnderecoDaoJDBC;
+import model.dao.impl.ProdutoDaoJDBC;
 
 public class DaoFactory {
 
-	
-	public static EixoDao createEixoDao() {
-		return new EixoDaoJDBC(DB.getConnection());
+	public static ProdutoDao createProdutoDao() {
+		return new ProdutoDaoJDBC(DB.getConnection());
 	}
-	public static EnderecoDao createEnderecoDao() { return new EnderecoDaoJDBC(DB.getConnection());}
-
 }

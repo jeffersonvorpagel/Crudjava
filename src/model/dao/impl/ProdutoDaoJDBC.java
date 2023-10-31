@@ -11,30 +11,33 @@ import java.util.List;
 import db.DB;
 import db.DbException;
 import db.DbIntegrityException;
-import model.dao.EixoDao;
-import model.entities.Eixo;
+import model.dao.ProdutoDao;
+import model.entities.Produto;
 
-public class EixoDaoJDBC implements EixoDao {
+public class ProdutoDaoJDBC implements ProdutoDao {
 
 	private Connection conn;
 	
-	public EixoDaoJDBC(Connection conn) {
+	public ProdutoDaoJDBC(Connection conn) {
 		this.conn = conn;
 	}
 	
 	@Override
-	public Eixo findById(Integer id) {
+	public Produto findById(Integer id) {
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-				"SELECT * FROM eixo WHERE Id = ?");
+				"SELECT * FROM Produtos WHERE Id = ?");
 			st.setInt(1, id);
 			rs = st.executeQuery();
 			if (rs.next()) {
-				Eixo obj = new Eixo();
+				Produto obj = new Produto();
 				obj.setId(rs.getInt("Id"));
-				obj.setCod(rs.getString("Cod"));
+				obj.setName(rs.getString("Nome"));
+				obj.setPreco(rs.getDouble("Preco"));
+				obj.setQuantidade(rs.getInt("quantidade"));
+				obj.setDespesas(rs.getDouble("despesas"));
 				obj.setDescricao(rs.getString("descricao"));
 				return obj;
 			}
@@ -50,22 +53,24 @@ public class EixoDaoJDBC implements EixoDao {
 	}
 
 	@Override
-	public List<Eixo> findAll() {
+	public List<Produto> findAll() {
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
 			st = conn.prepareStatement(
-				"SELECT * FROM eixo ORDER BY Id");
+				"SELECT * FROM Produtos ORDER BY id");
 			rs = st.executeQuery();
 
-			List<Eixo> list = new ArrayList<>();
+			List<Produto> list = new ArrayList<>();
 
 			while (rs.next()) {
-				Eixo obj = new Eixo();
+				Produto obj = new Produto();
 				obj.setId(rs.getInt("Id"));
-				obj.setCod(rs.getString("Cod"));
-				obj.setDescricao(rs.getString("Descricao"));
-
+				obj.setName(rs.getString("Nome"));
+				obj.setPreco(rs.getDouble("Preco"));
+				obj.setQuantidade(rs.getInt("quantidade"));
+				obj.setDespesas(rs.getDouble("despesas"));
+				obj.setDescricao(rs.getString("descricao"));
 				list.add(obj);
 			}
 			return list;
@@ -80,18 +85,21 @@ public class EixoDaoJDBC implements EixoDao {
 	}
 
 	@Override
-	public void insert(Eixo obj) {
+	public void insert(Produto obj) {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-				"INSERT INTO eixo " +
-				"(cod,Descricao) " +
+				"INSERT INTO Produtos " +
+			"(Nome,preco,quantidade,despesas,descricao) " +
 				"VALUES " +
-				"(?,?)",
+				"(?,?,?,?,?)",
 				Statement.RETURN_GENERATED_KEYS);
 
-			st.setString(1, obj.getCod());
-			st.setString(2, obj.getDescricao());
+			st.setString(1, obj.getName());
+			st.setDouble(2, obj.getPreco());
+			st.setInt(3, obj.getQuantidade());
+			st.setDouble(4, obj.getDespesas());
+			st.setString(5, obj.getDescricao());
 
 			int rowsAffected = st.executeUpdate();
 			
@@ -115,18 +123,24 @@ public class EixoDaoJDBC implements EixoDao {
 	}
 
 	@Override
-	public void update(Eixo obj) {
+	public void update(Produto obj) {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-				"UPDATE eixo " +
-				"SET Cod = ?, " +
-				"Descricao = ? " +
+				"UPDATE Produtos " +
+				"SET Name = ?," +
+				"preco = ?," +
+				"quantidade = ?," +
+				"despesas = ?," +
+				"descricao= ? " +
 				"WHERE Id = ?");
 
-			st.setString(1, obj.getCod());
-			st.setString(2, obj.getDescricao());
-			st.setInt(3, obj.getId());
+			st.setString(1, obj.getName());
+			st.setDouble(2, obj.getPreco());
+			st.setInt(3, obj.getQuantidade());
+			st.setDouble(4, obj.getDespesas());
+			st.setString(5, obj.getDescricao());
+			st.setInt(6, obj.getId());
 
 			st.executeUpdate();
 		}
@@ -143,7 +157,7 @@ public class EixoDaoJDBC implements EixoDao {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-				"DELETE FROM eixo WHERE Id = ?");
+				"DELETE FROM Produtos WHERE Id = ?");
 
 			st.setInt(1, id);
 
